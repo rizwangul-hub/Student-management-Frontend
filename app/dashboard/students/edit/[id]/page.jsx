@@ -26,7 +26,7 @@ export default function EditStudent() {
   // GET SINGLE STUDENT
   const fetchStudent = async () => {
     try {
-      const res = await api.get(`/students/${id}`);
+      const res = await api.get(`students/${id}`);
       setForm(res.data);
     } catch (error) {
       toast.error("Failed to load student");
@@ -56,7 +56,7 @@ export default function EditStudent() {
     try {
       setLoading(true);
 
-      await api.put(`/students/${id}`, form);
+      await api.put(`students/${id}`, form);
 
       toast.success("Student updated successfully");
 

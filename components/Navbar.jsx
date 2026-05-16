@@ -9,7 +9,7 @@ export default function Navbar({ toggleSidebar }) {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const res = await api.get("/auth/profile");
+        const res = await api.get("auth/profile");
         setUser(res.data);
       } catch (err) {
         console.log(err);

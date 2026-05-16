@@ -21,7 +21,7 @@ export default function LoginPage() {
     e.preventDefault();
 
     try {
-      const res = await api.post("/auth/login", form);
+      const res = await api.post("auth/login", form);
 
       localStorage.setItem("token", res.data.token);
 

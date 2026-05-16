@@ -30,7 +30,7 @@ export default function RegisterPage() {
     try {
       setLoading(true);
 
-      await api.post("/auth/register", form);
+      await api.post("auth/register", form);
 
       toast.success("Account created successfully! Please login.");
 

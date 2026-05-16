@@ -26,7 +26,7 @@ export default function StudentsPage() {
     async (currentPage = 1) => {
       try {
         setLoading(true);
-        const res = await api.get("/students", {
+        const res = await api.get("students", {
           params: {
             page: currentPage,
             limit: 5,
@@ -66,7 +66,7 @@ export default function StudentsPage() {
     try {
       setDeleteLoading(true);
 
-      await api.delete(`/students/${selectedId}`);
+      await api.delete(`students/${selectedId}`);
 
       toast.success("Student deleted");
 

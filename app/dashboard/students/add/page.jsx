@@ -37,7 +37,7 @@ export default function AddStudent() {
     try {
       setLoading(true);
 
-      await api.post("/students", form);
+      await api.post("students", form);
 
       toast.success("Student added successfully");
 
